@@ -1,0 +1,77 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  background-color: red;
+  overflow: hidden;
+}
+#gameContainer {
+  background-image: url(static/bg.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  width: 100%;
+  height: 100vh;
+}
+#mario {
+  background-image: url(static/mario.png);
+  background-repeat: no-repeat;
+  width: 232px;
+  height: 273px;
+  background-size: cover;
+  position: absolute;
+  bottom: 0%;
+  left: 52px;
+}
+#gameOver{
+  visibility: hidden;
+  position: relative;
+  top: 63px;
+  font-size: 53px;
+  text-align: center;
+  font-family: emoji;
+}
+#scoreCount{
+  font-family: sans-serif;
+  position: relative;
+  left: 23px;
+  top: 23px;
+  border: 2px solid black;
+  padding: 10px;
+  width: 112px;
+
+}
+#obst {
+  background-image: url(static/dragon.png);
+  background-size: cover;
+  width: 166px;
+  height: 113px;
+  position: absolute;
+  bottom: 0%;
+  right: 23px;
+}
+.obstAny{
+  animation: obsAny 5s linear infinite;
+}
+.animateMario {
+  animation: mario 0.9s linear;
+}
+@keyframes mario {
+  0% {
+    bottom: 0%;
+  }
+  50% {
+    bottom: 544px;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+@keyframes obsAny{
+  0%{
+    left: 100vw;
+  }
+  100%{
+    left: -10vw;
+  }
+}
